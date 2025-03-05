@@ -46,8 +46,13 @@ function verifySelection() {
         if (!isPanda && isSelected) correct = false; // Selected a non-panda
     });
 
-    result.textContent = correct ? 'Success! You passed the CAPTCHA.' : 'Failed! Try again.';
-    result.style.color = correct ? 'green' : 'red';
+    if (correct) {
+        // Redirect to success.html on success
+        window.location.href = 'success.html';
+    } else {
+        result.textContent = 'Failed! Try again.';
+        result.style.color = 'red';
+    }
 }
 
 submitBtn.addEventListener('click', verifySelection);

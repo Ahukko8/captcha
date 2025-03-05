@@ -8,6 +8,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* CAPTCHA Styles */
 .captcha-container {
     text-align: center;
     background: white;
@@ -52,4 +53,79 @@ button:hover {
 #result {
     margin-top: 10px;
     font-weight: bold;
+}
+
+/* Ad Page Styles */
+.ad-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.ad-container h1 {
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.ad-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-image {
+    align-items: center;
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e91e63;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #d81b60;
+}
+
+/* Haram Page Styles */
+.haram-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.haram-container h1 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.haram-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.haram-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
 }
