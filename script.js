@@ -17,7 +17,7 @@ const images = [
 function loadCaptcha() {
     imageGrid.innerHTML = '';
     result.textContent = '';
-    const shuffledImages = images.sort(() => 0.5 - Math.random()).slice(0, 6); // Pick 6 random images
+    const shuffledImages = images.sort(() => 0.5 - Math.random()).slice(0, 6);
     shuffledImages.forEach((img, index) => {
         const imgElement = document.createElement('img');
         imgElement.src = img.path;
@@ -37,17 +37,15 @@ function verifySelection() {
     const selectedImages = document.querySelectorAll('.image-grid img.selected');
     let correct = true;
 
-    // Check if all pandas are selected and no non-pandas are selected
     const allImages = document.querySelectorAll('.image-grid img');
     allImages.forEach(img => {
         const isPanda = img.dataset.isPanda === 'true';
         const isSelected = img.classList.contains('selected');
-        if (isPanda && !isSelected) correct = false; // Missed a panda
-        if (!isPanda && isSelected) correct = false; // Selected a non-panda
+        if (isPanda && !isSelected) correct = false;
+        if (!isPanda && isSelected) correct = false;
     });
 
     if (correct) {
-        // Redirect to success.html on success
         window.location.href = 'success.html';
     } else {
         result.textContent = 'Failed! Try again.';
@@ -58,5 +56,4 @@ function verifySelection() {
 submitBtn.addEventListener('click', verifySelection);
 refreshBtn.addEventListener('click', loadCaptcha);
 
-// Load CAPTCHA on page load
 loadCaptcha();
